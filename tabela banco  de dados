@@ -1,0 +1,22 @@
+-- Table: public.rastreamento
+
+-- DROP TABLE public.rastreamento;
+
+CREATE TABLE public.rastreamento
+(
+  id character(40) NOT NULL,
+  placa integer,
+  nome_funcionario integer,
+  data_ocorrencia timestamp without time zone,
+  velocidade_maxima integer,
+  "velocidade_registrada_ocorrência" integer,
+  "diferença_velocidade_permitida_registrada" integer,
+  latitude integer,
+  longitude integer,
+  CONSTRAINT rastreamento_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.rastreamento
+  OWNER TO postgres;
